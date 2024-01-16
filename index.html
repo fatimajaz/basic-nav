@@ -41,11 +41,7 @@
 
     .background {
       background-color: white;
-    }
-
-    .border {
-      border: 2px solid black;
-      width: 1190px;
+    
     }
 
     .navMenu a:hover {
@@ -56,7 +52,7 @@
 
 <body>
 
-  <nav class="navMenu  border">
+  <nav class="navMenu">
     <a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
     <a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Inbox</a>
     <a id="planner" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Planner</a>
@@ -69,27 +65,29 @@
 
   <script>
     let direction = "horizontal";
-    if (direction === "vertical") 
+    if (direction === "vertical") {
+        document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`);
+    }
 
     function navigate(id) {
-      function navigate(id) {
         if (id == 'home') {
-          window.open("https://www.notion.so/fatishub/My-Dashboard-885b824480e8416a84766d2c556a9d8e?pvs=4", 'home').focus();
+            window.open("https://www.notion.so/fatishub/My-Dashboard-885b824480e8416a84766d2c556a9d8e?pvs=4", 'Home').focus();
         } else if (id == "inbox") {
-          window.open("https://www.notion.so/fatishub/Daily-72693b51fd1c4bf08727a4d3dee1c2dd?pvs=4#f98d1c04798846719377632036b00114", 'inbox').focus();
+            window.open("https://www.notion.so/fatishub/Daily-72693b51fd1c4bf08727a4d3dee1c2dd?pvs=4#f98d1c04798846719377632036b00114", 'tasks').focus();
         } else if (id == "planner") {
-          window.open("https://www.notion.so/fatishub/Daily-72693b51fd1c4bf08727a4d3dee1c2dd?pvs=4", 'planner').focus();
+            window.open("https://www.notion.so/fatishub/Daily-72693b51fd1c4bf08727a4d3dee1c2dd?pvs=4", 'planner').focus();
         } else if (id == "work") {
-          window.open("https://www.notion.so/fatishub/Business-5449adad975b4c00b8484f68bf5f1541?pvs=4", 'work').focus();
+            window.open("https://www.notion.so/fatishub/Business-5449adad975b4c00b8484f68bf5f1541?pvs=4", 'work').focus();
         } else if (id == "learning") {
-          window.open("https://www.notion.so/fatishub/Learning-a4747ce62b9a486e9ac92ffb884dbde8?pvs=4", 'learning').focus();
+            window.open("https://www.notion.so/fatishub/Learning-a4747ce62b9a486e9ac92ffb884dbde8?pvs=4", 'learning').focus();
         } else if (id == "notes") {
-          window.open("https://www.notion.so/fatishub/Note-fc639ee7deb14626a9751780bfa91ac6?pvs=4", 'notes').focus();
+            window.open("https://www.notion.so/fatishub/Note-fc639ee7deb14626a9751780bfa91ac6?pvs=4", 'notes').focus();
         } else if (id == "journal") {
-          window.open("https://www.notion.so/fatishub/Journal-5cafb07dfb474dbcb0cc5003131cad41?pvs=4", 'journal').focus();
+            window.open("https://www.notion.so/fatishub/Journal-5cafb07dfb474dbcb0cc5003131cad41?pvs=4", 'journal').focus();
         }
-      }
-  </script>
+    }
+</script>
+
 
 </body>
 
